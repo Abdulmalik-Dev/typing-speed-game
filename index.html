@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Speed Test Game</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <h1 class="title">Typing speed test game</h1>
+    <!-- Start The Stracture  -->
+    <section class="container">
+      <p class="gameInfo">
+        You Are Playing On [ <span id="role"></span> ] Level & You Have [
+        <span id="seconds"></span> ] Seconds To Type The Word
+      </p>
+
+      <p class="theWord"></p>
+      <input type="text" id="input-words" />
+      <div class="words-center">words Will Show Here</div>
+      <div class="time-lift-and-score">
+        <span class="time-lift">Time Lift: <span></span> Seconds</span>
+        <span class="score">
+          Score: <span id="currentScore">0</span> From <span id="scores"></span>
+        </span>
+      </div>
+    </section>
+    <div class="start-end-game show">
+      <div class="start show">
+        <select id="roleSelect">
+          <option value="easy">Easy</option>
+          <option value="normal">Normal</option>
+          <option value="hard">Hard</option>
+        </select>
+
+        <button>Start Playing</button>
+      </div>
+      <div class="end">
+        <p id="gameEndedWithThisRole">Role:</p>
+        <p id="gameEndedWithThisTimeLift">Time Lift:</p>
+        <p id="gameEndedWithThisScore">Score:</p>
+        <p id="congratz">Congraz:</p>
+        <button>Again!</button>
+      </div>
+    </div>
+    <!-- End The Stracture  -->
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>

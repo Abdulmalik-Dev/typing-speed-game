@@ -1,0 +1,147 @@
+// Start Global Style
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #e91e63;
+  --main-padding: 15px;
+}
+body {
+  background-color: #eee;
+}
+// End Global Style
+// Start The Title Style
+.title {
+  background: var(--main-color);
+  color: white;
+  padding: var(--main-padding);
+  text-align: center;
+}
+// End The Title Style
+// Start The Container
+.container {
+  text-align: center;
+  margin-top: 2%;
+
+  @media (min-width: 1200px) {
+    & {
+      width: 1200px;
+      margin: 1% auto;
+    }
+  }
+  .gameInfo {
+    background-color: white;
+    padding: var(--main-padding);
+
+    #role {
+      color: var(--main-color);
+    }
+  }
+  .theWord {
+    color: var(--main-color);
+    font-size: 40px;
+    font-weight: bold;
+    margin: 2% 0;
+    user-select: none;
+  }
+  input {
+    width: 100%;
+    padding: var(--main-padding);
+    margin-bottom: 2%;
+    border: 2px solid var(--main-color);
+    caret-color: var(--main-color);
+
+    &:focus {
+      outline: none;
+    }
+  }
+  .words-center {
+    background-color: white;
+    padding: var(--main-padding);
+    div {
+      display: inline-block;
+      background-color: var(--main-color);
+      color: white;
+      padding: 8px;
+      border-radius: 10px;
+      margin: 5px;
+    }
+  }
+  .time-lift-and-score {
+    background-color: white;
+    margin: 15px 0;
+    padding: var(--main-padding);
+    display: flex;
+    justify-content: space-between;
+  }
+  .good,
+  .bad {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .good {
+    color: green;
+  }
+  .bad {
+    color: red;
+  }
+}
+// End The Container
+// Start Div For Start And End Game
+.start-end-game {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  .start,
+  .end {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: var(--main-padding);
+    border: 2px solid var(--main-color);
+    background-color: #0ba2e7;
+
+    button {
+      display: block;
+      width: 100%;
+      padding: var(--main-padding);
+      background-color: var(--main-color);
+      color: white;
+      border: none;
+      margin: 2em 0;
+      cursor: pointer;
+    }
+  }
+  .start {
+    width: 100%;
+
+    select {
+      width: 100%;
+      height: 30px;
+      text-align: center;
+      border: none;
+      border-bottom: 2px solid var(--main-color);
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  .end {
+    width: 40%;
+    gap: 20px;
+    color: white;
+    display: none;
+  }
+}
+.show {
+  display: flex !important;
+}
+// End Div For Start And End Game
